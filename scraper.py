@@ -27,10 +27,10 @@ def download_image(urllist):
     i = 1
     for url in urllist:
         page = requests.get(url, headers=headers, allow_redirects=True)
-        with open(str(i) + ".webp", 'wb') as f:
+        with open(str(i) + ".png", 'wb') as f:
             f.write(page.content)
         i+=1
-        print(f"Downloaded {i}.webp")
+        print(f"Downloaded {i}.png")
 
 url = 'https://www.midjourney.com/showcase/recents'
 url2 = 'https://www.midjourney.com/showcase/top'
